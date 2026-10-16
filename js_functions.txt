@@ -107,7 +107,8 @@ const handleClick = () => {
 };
 
 
-Questions -------------
+-------------Questions -------------
+
 1. What is the difference between a function declaration and a function expression?
 A function declaration defines a function directly using the function keyword, 
 whereas a function expression creates a function and assigns it to a variable.
@@ -338,6 +339,18 @@ Arrow functions provide concise syntax and preserve the surrounding this value w
 Example:
 Here, handleClick is an arrow function passed to React as the event handler.
 Benefits include:
+
+function Counter() {
+    const handleClick = () => {
+        console.log("Button clicked");
+    };
+
+    return (
+        <button onClick={handleClick}>
+            Click me
+        </button>
+    );
+}
 
 1. Concise syntax: They make callback functions easier to write.
 2. Lexical this: They preserve the surrounding this when used in contexts where this matters.
